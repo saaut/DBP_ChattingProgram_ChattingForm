@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Chatting_Form
 {
-    public partial class Form1 : Form
+    public partial class FormChatting : Form
     {
-        public Form1()
+        public FormChatting()
         {
             InitializeComponent();
+        }
+
+        private void buttonSend_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace Chatting_Form
 {
-    partial class Form1
+    partial class FormChattingRoom
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -73,19 +73,20 @@ namespace Chatting_Form
             this.listBox2.Size = new System.Drawing.Size(243, 169);
             this.listBox2.TabIndex = 9;
             // 
-            // Form1
+            // FormChattingRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(305, 459);
+            this.ClientSize = new System.Drawing.Size(305, 450);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Black;
-            this.Name = "Form1";
+            this.Name = "FormChattingRoom";
             this.Text = "대화방";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
