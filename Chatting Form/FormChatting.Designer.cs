@@ -41,15 +41,17 @@ namespace Chatting_Form
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(19, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 15);
+            this.label2.Size = new System.Drawing.Size(39, 20);
             this.label2.TabIndex = 9;
-            this.label2.Text = "대화 내용";
+            this.label2.Text = "대화";
             // 
             // textBox2
             // 
+            this.textBox2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox2.Location = new System.Drawing.Point(22, 56);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -59,6 +61,7 @@ namespace Chatting_Form
             // buttonSend
             // 
             this.buttonSend.BackColor = System.Drawing.Color.White;
+            this.buttonSend.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.buttonSend.Location = new System.Drawing.Point(667, 353);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(87, 79);
@@ -69,6 +72,7 @@ namespace Chatting_Form
             // 
             // textBoxSend
             // 
+            this.textBoxSend.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBoxSend.Location = new System.Drawing.Point(97, 353);
             this.textBoxSend.Multiline = true;
             this.textBoxSend.Name = "textBoxSend";
@@ -78,16 +82,18 @@ namespace Chatting_Form
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(25, 385);
+            this.label1.Location = new System.Drawing.Point(18, 382);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 15);
+            this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "message";
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox1.Location = new System.Drawing.Point(22, 56);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -97,6 +103,7 @@ namespace Chatting_Form
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("맑은 고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button1.Location = new System.Drawing.Point(709, 56);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(44, 44);
