@@ -30,12 +30,16 @@ namespace Chatting_Form
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxHistoryChat = new System.Windows.Forms.TextBox();
             this.buttonSend = new System.Windows.Forms.Button();
             this.textBoxSend = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonNoticeVisible = new System.Windows.Forms.Button();
+            this.buttonConnect = new System.Windows.Forms.Button();
+            this.textBoxPort = new System.Windows.Forms.TextBox();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.buttonDisconnect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -49,14 +53,14 @@ namespace Chatting_Form
             this.label2.TabIndex = 9;
             this.label2.Text = "대화";
             // 
-            // textBox2
+            // textBoxHistoryChat
             // 
-            this.textBox2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(22, 56);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(732, 272);
-            this.textBox2.TabIndex = 8;
+            this.textBoxHistoryChat.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBoxHistoryChat.Location = new System.Drawing.Point(22, 56);
+            this.textBoxHistoryChat.Multiline = true;
+            this.textBoxHistoryChat.Name = "textBoxHistoryChat";
+            this.textBoxHistoryChat.Size = new System.Drawing.Size(732, 272);
+            this.textBoxHistoryChat.TabIndex = 8;
             // 
             // buttonSend
             // 
@@ -100,16 +104,59 @@ namespace Chatting_Form
             this.textBox1.Size = new System.Drawing.Size(686, 44);
             this.textBox1.TabIndex = 11;
             // 
-            // button1
+            // buttonNoticeVisible
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("맑은 고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(709, 56);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(44, 44);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "공지";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonNoticeVisible.BackColor = System.Drawing.Color.White;
+            this.buttonNoticeVisible.Font = new System.Drawing.Font("맑은 고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.buttonNoticeVisible.Location = new System.Drawing.Point(709, 56);
+            this.buttonNoticeVisible.Name = "buttonNoticeVisible";
+            this.buttonNoticeVisible.Size = new System.Drawing.Size(44, 44);
+            this.buttonNoticeVisible.TabIndex = 12;
+            this.buttonNoticeVisible.Text = "공지";
+            this.buttonNoticeVisible.UseVisualStyleBackColor = false;
+            // 
+            // buttonConnect
+            // 
+            this.buttonConnect.BackColor = System.Drawing.Color.White;
+            this.buttonConnect.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.buttonConnect.Location = new System.Drawing.Point(485, 15);
+            this.buttonConnect.Name = "buttonConnect";
+            this.buttonConnect.Size = new System.Drawing.Size(81, 35);
+            this.buttonConnect.TabIndex = 15;
+            this.buttonConnect.Text = "연결시작(수정중)";
+            this.buttonConnect.UseVisualStyleBackColor = false;
+            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
+            // 
+            // textBoxPort
+            // 
+            this.textBoxPort.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBoxPort.Location = new System.Drawing.Point(572, 17);
+            this.textBoxPort.Multiline = true;
+            this.textBoxPort.Name = "textBoxPort";
+            this.textBoxPort.Size = new System.Drawing.Size(88, 27);
+            this.textBoxPort.TabIndex = 16;
+            this.textBoxPort.Text = "Port";
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBoxAddress.Location = new System.Drawing.Point(667, 17);
+            this.textBoxAddress.Multiline = true;
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(89, 27);
+            this.textBoxAddress.TabIndex = 17;
+            this.textBoxAddress.Text = "Address";
+            // 
+            // buttonDisconnect
+            // 
+            this.buttonDisconnect.BackColor = System.Drawing.Color.White;
+            this.buttonDisconnect.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.buttonDisconnect.Location = new System.Drawing.Point(392, 13);
+            this.buttonDisconnect.Name = "buttonDisconnect";
+            this.buttonDisconnect.Size = new System.Drawing.Size(87, 34);
+            this.buttonDisconnect.TabIndex = 18;
+            this.buttonDisconnect.Text = "연결 종료";
+            this.buttonDisconnect.UseVisualStyleBackColor = false;
             // 
             // FormChatting
             // 
@@ -117,15 +164,20 @@ namespace Chatting_Form
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(778, 455);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonDisconnect);
+            this.Controls.Add(this.textBoxAddress);
+            this.Controls.Add(this.textBoxPort);
+            this.Controls.Add(this.buttonConnect);
+            this.Controls.Add(this.buttonNoticeVisible);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxHistoryChat);
             this.Controls.Add(this.buttonSend);
             this.Controls.Add(this.textBoxSend);
             this.Name = "FormChatting";
             this.Text = "채팅";
+            this.Load += new System.EventHandler(this.FormChatting_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,11 +186,15 @@ namespace Chatting_Form
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxHistoryChat;
         private System.Windows.Forms.Button buttonSend;
         private System.Windows.Forms.TextBox textBoxSend;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonNoticeVisible;
+        private System.Windows.Forms.Button buttonConnect;
+        private System.Windows.Forms.TextBox textBoxPort;
+        private System.Windows.Forms.TextBox textBoxAddress;
+        private System.Windows.Forms.Button buttonDisconnect;
     }
 }

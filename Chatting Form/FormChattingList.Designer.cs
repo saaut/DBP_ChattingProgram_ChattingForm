@@ -31,8 +31,8 @@ namespace Chatting_Form
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBoxMember = new System.Windows.Forms.ListBox();
+            this.listBoxChattingList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -57,25 +57,26 @@ namespace Chatting_Form
             this.label3.TabIndex = 6;
             this.label3.Text = "대화 목록 리스트";
             // 
-            // listBox1
+            // listBoxMember
             // 
-            this.listBox1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(30, 55);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(243, 164);
-            this.listBox1.TabIndex = 8;
+            this.listBoxMember.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.listBoxMember.FormattingEnabled = true;
+            this.listBoxMember.ItemHeight = 20;
+            this.listBoxMember.Location = new System.Drawing.Point(30, 55);
+            this.listBoxMember.Name = "listBoxMember";
+            this.listBoxMember.Size = new System.Drawing.Size(243, 164);
+            this.listBoxMember.TabIndex = 8;
             // 
-            // listBox2
+            // listBoxChattingList
             // 
-            this.listBox2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(31, 269);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(243, 164);
-            this.listBox2.TabIndex = 9;
+            this.listBoxChattingList.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.listBoxChattingList.FormattingEnabled = true;
+            this.listBoxChattingList.ItemHeight = 20;
+            this.listBoxChattingList.Location = new System.Drawing.Point(31, 269);
+            this.listBoxChattingList.Name = "listBoxChattingList";
+            this.listBoxChattingList.Size = new System.Drawing.Size(243, 164);
+            this.listBoxChattingList.TabIndex = 9;
+            this.listBoxChattingList.SelectedIndexChanged += new System.EventHandler(this.listBoxChattingList_SelectedIndexChanged);
             // 
             // FormChattingRoom
             // 
@@ -83,8 +84,8 @@ namespace Chatting_Form
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(305, 460);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBoxChattingList);
+            this.Controls.Add(this.listBoxMember);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Black;
@@ -99,8 +100,8 @@ namespace Chatting_Form
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBoxMember;
+        private System.Windows.Forms.ListBox listBoxChattingList;
     }
 }
 
